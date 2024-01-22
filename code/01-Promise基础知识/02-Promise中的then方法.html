@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise中的then方法</title>
+</head>
+
+<body>
+    <!--
+        then：指定用于得到成功value的成功回调和用于得到失败reason的失败的回调，并且将返回一个【新的Promise实例化对象】
+        成功的状态：执行then方法的第一个回调函数
+        失败的状态：执行then方法的第二个回调函数 
+
+        then方法的返回值的Promise实例化对象的状态取决于回调函数中的内容
+            1. 如果返回为非Promise实例化对象或无返回值，则得到一个是成功的Promise，结果值为undefined或返回的对象
+            2. 如果返回的是promise实例化对象，则Promise实例化对象的状态和结果值将直接影响result常量的状态和结果值
+            3. 如果为抛出异常，则新的Promise实例化对象(result)为失败的Promise
+        上述三条对resolve和reject都适用
+        
+    -->
+    <script>
+        const p1 = new Promise((resolve, reject) => {
+            // resolve('ok');
+            reject('error')
+        })
+
+        const result = p1.then(value => {
+            // 1. 返回值为非Promise实例化对象（或无返回值）
+            return value;
+            // 2. 返回值为Promise实例化对象
+            // return new Promise((resolve, reject) => {
+            //     reject('error');
+            // });
+            // 3. 返回值为抛出异常
+            // throw '异常信息';
+        }, reason => {
+            // 1. 返回值为非Promise实例化对象
+            // return reason;
+            // 2. 返回值为Promise实例化对象
+            // return new Promise((resolve, reject) => {
+            //     reject('error');
+            // });
+            // 3. 返回值为抛出异常
+            // throw '异常信息';
+        })
+
+        console.log(result);
+    </script>
+</body>
+
+</html>
