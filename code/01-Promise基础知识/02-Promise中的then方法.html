@@ -15,9 +15,9 @@
         失败的状态：执行then方法的第二个回调函数 
 
         then方法的返回值的Promise实例化对象的状态取决于回调函数中的内容
-            1. 如果返回为非Promise实例化对象或无返回值，则得到一个是成功的Promise，结果值为undefined或返回的对象
+            1. 如果返回为非Promise实例化对象或无返回值，则得到一个是成功（fulfilled）的Promise，结果值为undefined或返回的对象
             2. 如果返回的是promise实例化对象，则Promise实例化对象的状态和结果值将直接影响result常量的状态和结果值
-            3. 如果为抛出异常，则新的Promise实例化对象(result)为失败的Promise
+            3. 如果为抛出异常，则新的Promise实例化对象(result)为失败（rejected）的Promise
         上述三条对resolve和reject都适用
         
     -->
