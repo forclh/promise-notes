@@ -3,7 +3,7 @@
 ## 相关资料
 
 |视频教程|官方资料|其他笔记|
-| :---- | :---- |:----|
+| :----: | :----: |:----:|
 |[【尚硅谷】Promise教程从入门到实战](https://www.bilibili.com/video/BV1Tm4y1h7SY?p=1&vd_source=8178530fbcba3b01db39ea80d35da960)|[百度网盘](https://pan.baidu.com/s/1c3w9C-BRktJDj_d-HTi5QA?pwd=77vv)|[笔记汇总](https://github.com/forclh/AllNotes)|
 
 ## 教程笔记内容
